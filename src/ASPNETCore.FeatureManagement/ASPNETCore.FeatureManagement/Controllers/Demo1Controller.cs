@@ -58,7 +58,7 @@ namespace ASPNETCore.FeatureManagement.Controllers
         [HttpGet("attrMultiAll")]
         public string GetResultWithAttributeAndMultiFeaturesAll()
         {
-            // If the FeatureA is off, it can not get here.
+            // If the FeatureA or FeatureB is off, it can not get here.
             return $"{nameof(FeatureNames.FeatureA)} and {nameof(FeatureNames.FeatureB)} are both On";
         }
         
@@ -70,7 +70,7 @@ namespace ASPNETCore.FeatureManagement.Controllers
         [HttpGet("attrMultiAny")]
         public string GetResultWithAttributeAndMultiFeaturesAny()
         {
-            // If the FeatureA is off, it can not get here.
+            // If the FeatureA and FeatureB are both off, it can not get here.
             return $"{nameof(FeatureNames.FeatureA)} or {nameof(FeatureNames.FeatureB)} is On";
         }
     }
